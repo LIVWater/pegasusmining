@@ -3792,20 +3792,11 @@ html, body { overflow-x: clip; }
 }
 
 /* ============================================================
-   HERO VIDEO — mobile bandwidth optimization
-   On mobile/tablet, the video element is removed entirely by nav.js
-   so the 23MB MP4 never downloads. The poster image displays instead.
+   HERO VIDEO — autoplays on all devices (mobile, tablet, desktop).
+   Keep the video element active at all breakpoints.
    ============================================================ */
-@media (max-width: 760px) {
-  .block-bg video { display: none; }
-  /* Show the hero poster image as a CSS-driven background fallback */
-  .block.is-first .block-bg::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("../assets/brand/hero-mining-truck.jpg");
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-  }
+.block-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
