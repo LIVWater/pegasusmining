@@ -66,6 +66,20 @@
     document.querySelector(".nav-hamburger")?.classList.remove("is-active");
   }
 
+  // Remove the hero video entirely on mobile so the 23MB MP4 never downloads.
+  // The poster image (CSS background) takes over for small screens.
+  function killHeroVideoOnMobile() {
+    if (window.innerWidth > 760) return;
+    const v = document.getElementById("heroVideo");
+    if (!v) return;
+    v.pause();
+    v.removeAttribute("autoplay");
+    v.removeAttribute("src");
+    v.querySelectorAll("source").forEach(s => s.remove());
+    v.load();
+    v.style.display = "none";
+  }
+
   // Toggle a class on the sticky header once the user scrolls past the top —
   // gives it a subtle drop-shadow so it lifts off the page.
   function initStickyShadow() {
@@ -79,9 +93,10 @@
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => { init(); initStickyShadow(); });
+    document.addEventListener("DOMContentLoaded", () => { init(); initStickyShadow(); killHeroVideoOnMobile(); });
   } else {
     init();
     initStickyShadow();
+    killHeroVideoOnMobile();
   }
 })();

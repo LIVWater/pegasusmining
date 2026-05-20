@@ -23,7 +23,7 @@
 <header class="header">
   <div class="header-inner">
     <a href="index.html" class="brand" aria-label="Pegasus Engineering & Mining Supplies — Home">
-      <img class="logo-emblem" src="assets/brand/logo-emblem-transparent.png" alt="Pegasus Engineering & Mining Supplies">
+      <img loading="eager" decoding="async" fetchpriority="high" class="logo-emblem" src="assets/brand/logo-emblem-transparent.png" alt="Pegasus Engineering & Mining Supplies">
     </a>
     <nav class="nav-primary" aria-label="Primary">
       <a href="marketplace.html">Marketplace</a>
@@ -269,7 +269,7 @@
         ? `Quote required`
         : `${window.cart.fmtZAR(item.price)} <small>/ ${escapeHtml(item.unit||"ea")}</small> × ${item.qty}`;
       return `<div class="checkout-line">
-        <div class="checkout-line-img"><img src="${escapeHtml(item.image)}" alt=""></div>
+        <div class="checkout-line-img"><img loading="lazy" decoding="async" src="${escapeHtml(item.image)}" alt=""></div>
         <div class="checkout-line-info">
           <span class="checkout-line-meta">${escapeHtml(item.brand)}</span>
           <span class="checkout-line-title">${escapeHtml(item.title)}</span>

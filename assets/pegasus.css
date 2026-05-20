@@ -3790,3 +3790,22 @@ html, body { overflow-x: clip; }
   html, body { overflow-x: hidden; }
   .header { position: -webkit-sticky; position: sticky; top: 0; }
 }
+
+/* ============================================================
+   HERO VIDEO — mobile bandwidth optimization
+   On mobile/tablet, the video element is removed entirely by nav.js
+   so the 23MB MP4 never downloads. The poster image displays instead.
+   ============================================================ */
+@media (max-width: 760px) {
+  .block-bg video { display: none; }
+  /* Show the hero poster image as a CSS-driven background fallback */
+  .block.is-first .block-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/brand/hero-mining-truck.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+}
