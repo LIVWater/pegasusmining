@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Pegasus Engineering &amp; Mining Supplies</title>
+<meta name="description" content="Submit your order or quote request — Pegasus Engineering & Mining Supplies trade desk.">
+<link rel="icon" href="assets/brand/logo-emblem-transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Roboto+Condensed:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/pegasus.css">
+</head>
+<body>
+
+<div class="announce" id="announce">
+  <a href="products.html">Browse our Engineering &amp; Mining Supply Catalogue</a>
+  <button class="announce-close" aria-label="Close" onclick="document.getElementById('announce').style.display='none'">
+    <svg viewBox="0 0 20 20" fill="currentColor"><path d="M17 4.4L15.6 3L10 8.6L4.4 3L3 4.4L8.6 10L3 15.6L4.4 17L10 11.4L15.6 17L17 15.6L11.4 10L17 4.4Z"/></svg>
+  </button>
+</div>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="Pegasus Engineering & Mining Supplies — Home">
+      <img class="logo-emblem" src="assets/brand/logo-emblem-transparent.png" alt="Pegasus Engineering & Mining Supplies">
+    </a>
+    <nav class="nav-primary" aria-label="Primary">
+      <a href="marketplace.html">Marketplace</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+      <a href="network.html">Network</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-cta">
+      <div class="nav-icons">
+        <button aria-label="Search">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="cart-icon-btn" aria-label="Open cart" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 6h15l-2 10H8L6 6Z"/>
+            <path d="M6 6L4 2H2"/>
+            <circle cx="10" cy="20" r="1.4" fill="currentColor"/>
+            <circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+          </svg>
+          <span class="cart-icon-count" aria-live="polite"></span>
+        </button>
+      </div>
+      <a href="contact.html" class="cta-button">Request Quote</a>
+      <button class="nav-hamburger" aria-label="Open menu" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="checkout-hero">
+    <div class="checkout-hero-inner">
+      <div class="suphead">Review &amp; Submit</div>
+      <h1 class="checkout-hero-title" id="checkout-h1">Checkout</h1>
+      <p class="checkout-hero-lead" id="checkout-lead">Confirm your order and contact details. We'll respond with availability and lead time — typically within one working day.</p>
+    </div>
+  </section>
+
+  <section class="checkout-section">
+    <div class="checkout-grid">
+
+      <!-- LEFT: form -->
+      <form class="checkout-form" id="checkout-form" autocomplete="on">
+        <h3 class="checkout-form-head">Delivery &amp; Contact</h3>
+
+        <div class="checkout-field-row">
+          <div class="checkout-field">
+            <label for="f-name">Full name *</label>
+            <input id="f-name" name="name" type="text" required>
+          </div>
+          <div class="checkout-field">
+            <label for="f-company">Company *</label>
+            <input id="f-company" name="company" type="text" required>
+          </div>
+        </div>
+
+        <div class="checkout-field-row">
+          <div class="checkout-field">
+            <label for="f-email">Email *</label>
+            <input id="f-email" name="email" type="email" required>
+          </div>
+          <div class="checkout-field">
+            <label for="f-phone">Phone *</label>
+            <input id="f-phone" name="phone" type="tel" required>
+          </div>
+        </div>
+
+        <div class="checkout-field-row">
+          <div class="checkout-field">
+            <label for="f-account">Trade account # <span class="muted">(if applicable)</span></label>
+            <input id="f-account" name="account" type="text" placeholder="e.g. PEG-2104">
+          </div>
+          <div class="checkout-field">
+            <label for="f-po">Purchase order # <span class="muted">(if applicable)</span></label>
+            <input id="f-po" name="po" type="text">
+          </div>
+        </div>
+
+        <h3 class="checkout-form-head" style="margin-top:32px;">Delivery Address</h3>
+
+        <div class="checkout-field">
+          <label for="f-site">Site / Reference</label>
+          <input id="f-site" name="site" type="text" placeholder="e.g. Plant #3 — Conveyor House">
+        </div>
+
+        <div class="checkout-field">
+          <label for="f-addr">Address *</label>
+          <textarea id="f-addr" name="address" rows="3" required placeholder="Street, suburb, town, postal code"></textarea>
+        </div>
+
+        <div class="checkout-field">
+          <label for="f-notes">Notes for the desk <span class="muted">(optional)</span></label>
+          <textarea id="f-notes" name="notes" rows="3" placeholder="Required-by date, packaging, mill-cert requirements, hazardous-area constraints…"></textarea>
+        </div>
+
+        <div class="checkout-actions">
+          <button type="submit" class="cta-button" id="checkout-submit">Submit</button>
+          <a href="products.html" class="btn btn-underline" style="margin-top:0;">← Continue Shopping</a>
+        </div>
+
+        <p class="checkout-disclaimer">By submitting you agree to be contacted by Pegasus regarding this order. Final pricing on services is confirmed after technical scoping.</p>
+      </form>
+
+      <!-- RIGHT: order summary -->
+      <aside class="checkout-summary">
+        <h3 class="checkout-summary-head">Order Summary</h3>
+        <div class="checkout-summary-body" id="checkout-summary-body"></div>
+        <div class="checkout-summary-foot" id="checkout-summary-foot"></div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- Success state (hidden until submit) -->
+  <section class="checkout-success" id="checkout-success" hidden>
+    <div class="checkout-success-inner">
+      <div class="checkout-success-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="11"/><path d="M7 12l3.5 3.5L17 9"/></svg>
+      </div>
+      <div class="suphead">Thank you</div>
+      <h2 class="checkout-success-title" id="success-title">Submitted to the trade desk.</h2>
+      <p class="checkout-success-lead" id="success-lead">We'll respond shortly with confirmation, availability and lead time.</p>
+      <p class="checkout-success-ref">Reference: <strong id="success-ref">—</strong></p>
+      <div class="checkout-success-actions">
+        <a href="products.html" class="cta-button">Continue Shopping</a>
+        <a href="index.html" class="btn btn-underline" style="margin-top:0;">Back Home</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="wordmark">Pegasus</div>
+        <div class="mark">Engineering &amp; Mining Supplies</div>
+        <p>Trade supplier of engineered components, consumables and bespoke fabrication to the South African mining, industrial and infrastructure sectors.</p>
+      </div>
+      <div>
+        <h5>Browse</h5>
+        <ul>
+          <li><a href="marketplace.html">Marketplace</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="network.html">Network</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Divisions</h5>
+        <ul>
+          <li><a href="network.html#welding">Welding &amp; Cutting</a></li>
+          <li><a href="network.html#abrasive">Abrasive</a></li>
+          <li><a href="network.html#power-tools">Power Tools</a></li>
+          <li><a href="network.html#safety">Safety &amp; PPE</a></li>
+          <li><a href="network.html#hand-tools">Hand Tools</a></li>
+          <li><a href="network.html#electrical">Electrical</a></li>
+          <li><a href="network.html#paint">Paint Products</a></li>
+          <li><a href="network.html#lubricants">Lubricants &amp; Fuel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Pegasus</a></li>
+          <li><a href="contact.html">Trade Accounts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:accounts@pegasuseng.co.za">accounts@pegasuseng.co.za</a></li>
+          <li><a href="tel:+27132431390">013 243 1390</a></li>
+          <li><a href="contact.html">Boksburg, Gauteng</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Pegasus Engineering &amp; Mining Supplies (Pty) Ltd</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+<script src="assets/cart.js"></script>
+<script>
+(function () {
+  const body = document.getElementById("checkout-summary-body");
+  const foot = document.getElementById("checkout-summary-foot");
+  const h1 = document.getElementById("checkout-h1");
+  const lead = document.getElementById("checkout-lead");
+  const submitBtn = document.getElementById("checkout-submit");
+  const form = document.getElementById("checkout-form");
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  }
+
+  function render() {
+    const cart = window.cart.getCart();
+    const hasSvc = window.cart.hasServices();
+    const hasProd = window.cart.hasProducts();
+    const subtotal = window.cart.getProductSubtotal();
+    const vat = subtotal * 0.15;
+    const grand = subtotal + vat;
+
+    // Adjust copy
+    if (hasSvc && hasProd) {
+      h1.textContent = "Order & Quote Request";
+      lead.textContent = "Confirm your basket below. Products will be invoiced; services will return a written quote within one working day.";
+      submitBtn.textContent = "Submit Order & Quote";
+    } else if (hasSvc) {
+      h1.textContent = "Quote Request";
+      lead.textContent = "Confirm your service items below. Final pricing is confirmed after technical scoping — typically within one working day.";
+      submitBtn.textContent = "Submit Quote Request";
+    } else if (hasProd) {
+      h1.textContent = "Checkout";
+      lead.textContent = "Confirm your order and contact details. Delivery is quoted after the order is placed.";
+      submitBtn.textContent = "Place Order";
+    } else {
+      h1.textContent = "Your Cart is Empty";
+      lead.textContent = "Add products or services from the catalogue to continue.";
+      submitBtn.style.display = "none";
+    }
+
+    // Summary body
+    if (cart.length === 0) {
+      body.innerHTML = `<p class="checkout-empty">Nothing in your cart yet. <a href="products.html">Browse the catalogue →</a></p>`;
+      foot.innerHTML = "";
+      return;
+    }
+    body.innerHTML = cart.map(item => {
+      const isService = item.type === "service";
+      const line = isService
+        ? `<span class="checkout-line-quote">Quote</span>`
+        : `<span class="checkout-line-total">${window.cart.fmtZAR(item.price * item.qty)}</span>`;
+      const sub = isService
+        ? `Quote required`
+        : `${window.cart.fmtZAR(item.price)} <small>/ ${escapeHtml(item.unit||"ea")}</small> × ${item.qty}`;
+      return `<div class="checkout-line">
+        <div class="checkout-line-img"><img src="${escapeHtml(item.image)}" alt=""></div>
+        <div class="checkout-line-info">
+          <span class="checkout-line-meta">${escapeHtml(item.brand)}</span>
+          <span class="checkout-line-title">${escapeHtml(item.title)}</span>
+          <span class="checkout-line-sub">${sub}</span>
+        </div>
+        ${line}
+      </div>`;
+    }).join("");
+
+    let footHtml = "";
+    if (subtotal > 0) {
+      footHtml += `
+        <div class="checkout-totals">
+          <div class="checkout-total-row"><span>Subtotal</span><span>${window.cart.fmtZAR(subtotal)}</span></div>
+          <div class="checkout-total-row"><span>VAT (15%)</span><span>${window.cart.fmtZAR(vat)}</span></div>
+          <div class="checkout-total-row checkout-total-row--grand"><strong>Total</strong><strong>${window.cart.fmtZAR(grand)}</strong></div>
+          <div class="checkout-total-foot">Delivery quoted separately.</div>
+        </div>`;
+    }
+    if (hasSvc) {
+      footHtml += `<p class="checkout-quote-note">Services priced via written quote after technical scoping.</p>`;
+    }
+    foot.innerHTML = footHtml;
+  }
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    if (window.cart.getCart().length === 0) return;
+    if (!form.reportValidity()) return;
+    const ref = "PEG-" + Date.now().toString(36).toUpperCase().slice(-6);
+    document.getElementById("success-ref").textContent = ref;
+    const hasSvc = window.cart.hasServices();
+    const hasProd = window.cart.hasProducts();
+    document.getElementById("success-title").textContent =
+      hasSvc && hasProd ? "Order & quote submitted." :
+      hasSvc ? "Quote request submitted." :
+      "Order submitted.";
+    document.getElementById("success-lead").textContent =
+      hasSvc ? "We'll respond with a written quote, availability and lead time — typically within one working day."
+             : "We'll confirm availability, lead time and delivery — typically within one working day.";
+    document.querySelector(".checkout-section").style.display = "none";
+    document.querySelector(".checkout-hero").style.display = "none";
+    document.getElementById("checkout-success").hidden = false;
+    window.cart.clear();
+    window.scrollTo({top: 0, behavior: "smooth"});
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>

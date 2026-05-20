@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Pegasus Engineering &amp; Mining Supplies</title>
+<meta name="description" content="Contact Pegasus Engineering & Mining Supplies — Boksburg, Gauteng. Sales, technical and accounts contacts, request a quote, open a trade account.">
+<link rel="icon" href="assets/brand/logo-emblem-transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Roboto+Condensed:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/pegasus.css">
+</head>
+<body>
+
+<div class="announce" id="announce">
+  <a href="mailto:accounts@pegasuseng.co.za">sales@pegasuseng.co.za · +27 11 000 0000</a>
+  <button class="announce-close" aria-label="Close" onclick="document.getElementById('announce').style.display='none'">
+    <svg viewBox="0 0 20 20" fill="currentColor"><path d="M17 4.4L15.6 3L10 8.6L4.4 3L3 4.4L8.6 10L3 15.6L4.4 17L10 11.4L15.6 17L17 15.6L11.4 10L17 4.4Z"/></svg>
+  </button>
+</div>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="Pegasus Engineering & Mining Supplies — Home">
+      <img class="logo-emblem" src="assets/brand/logo-emblem-transparent.png" alt="Pegasus Engineering & Mining Supplies">
+    </a>
+    <nav class="nav-primary" aria-label="Primary">
+      <a href="marketplace.html">Marketplace</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+      <a href="network.html">Network</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-cta">
+            <div class="nav-icons">
+        <button aria-label="Search">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="cart-icon-btn" aria-label="Open cart" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 6h15l-2 10H8L6 6Z"/>
+            <path d="M6 6L4 2H2"/>
+            <circle cx="10" cy="20" r="1.4" fill="currentColor"/>
+            <circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+          </svg>
+          <span class="cart-icon-count" aria-live="polite"></span>
+        </button>
+      </div>
+      <a href="contact.html" class="cta-button">Request Quote</a>
+      <button class="nav-hamburger" aria-label="Open menu" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="block layout-default is-first is-shorter">
+    <div class="block-bg has-overlay">
+      <img src="assets/brand/hero-silos.jpg" alt="Pegasus warehouse">
+    </div>
+    <div class="block-text">
+      <div class="suphead">Get in Touch</div>
+      <h1 class="block-title">Send a Line List.<br>Get a <em>Quote.</em></h1>
+      <p class="block-copy">Send us your specification, drawing or part number — we'll respond with availability, lead time and a written quote, typically within one working day.</p>
+    </div>
+  </section>
+
+  <!-- ENQUIRY FORM -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="suphead">Submit an Enquiry</div>
+        <h2>Tell us what you need.</h2>
+        <p>The form below routes directly to our trade desk. Existing trade accounts can also email sales@pegasuseng.co.za or call the office during working hours.</p>
+      </div>
+      <form class="form" onsubmit="event.preventDefault();this.querySelector('.actions').innerHTML='<div style=\'color:var(--c-secondary);font-family:var(--ff-heading);font-size:18px\'>Thank you — we\'ll be in touch within one working day.</div>';">
+        <div>
+          <label for="f-name">Full Name</label>
+          <input type="text" id="f-name" name="name" required>
+        </div>
+        <div>
+          <label for="f-company">Company</label>
+          <input type="text" id="f-company" name="company" required>
+        </div>
+        <div>
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" required>
+        </div>
+        <div>
+          <label for="f-phone">Phone</label>
+          <input type="tel" id="f-phone" name="phone">
+        </div>
+        <div class="row-full">
+          <label for="f-enquiry">Type of Enquiry</label>
+          <select id="f-enquiry" name="enquiry">
+            <option>Product / Stock Enquiry</option>
+            <option>Fabrication / Custom Work</option>
+            <option>On-Site Shutdown Support</option>
+            <option>Refurbishment</option>
+            <option>Marketplace Listing</option>
+            <option>Trade Account Application</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="row-full">
+          <label for="f-details">Details</label>
+          <textarea id="f-details" name="details" placeholder="Specification, part number, drawing reference or scope of work…" required></textarea>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn btn-default" style="background:var(--c-secondary);color:var(--c-bg);border-color:var(--c-secondary);margin-top:0">Submit Enquiry</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- DEPARTMENTAL CONTACTS -->
+  <section class="section is-soft">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="suphead">Direct Contacts</div>
+        <h2>Speak to the right desk, first time.</h2>
+      </div>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="role">Sales &amp; Trade Desk</div>
+          <h4>Nadia Pretorius</h4>
+          <a href="mailto:accounts@pegasuseng.co.za">accounts@pegasuseng.co.za</a>
+          <a href="tel:+27132431390">013 243 1390</a>
+          <a href="#" style="color:var(--c-accent);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;margin-top:14px;border-bottom:1px solid var(--c-accent);padding-bottom:2px;display:inline-block">Catalogues · Quotes · Lead Times</a>
+        </div>
+        <div class="contact-card">
+          <div class="role">Technical &amp; Engineering</div>
+          <h4>Thabo Mokoena, Pr.Eng</h4>
+          <a href="mailto:engineering@pegasuseng.co.za">engineering@pegasuseng.co.za</a>
+          <a href="tel:+27110000002">+27 11 000 0002</a>
+          <a href="#" style="color:var(--c-accent);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;margin-top:14px;border-bottom:1px solid var(--c-accent);padding-bottom:2px;display:inline-block">Specs · Substitutions · Duty Selection</a>
+        </div>
+        <div class="contact-card">
+          <div class="role">Accounts &amp; Trade Applications</div>
+          <h4>Lerato Khumalo</h4>
+          <a href="mailto:accounts@pegasuseng.co.za">accounts@pegasuseng.co.za</a>
+          <a href="tel:+27110000004">+27 11 000 0004</a>
+          <a href="#" style="color:var(--c-accent);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;margin-top:14px;border-bottom:1px solid var(--c-accent);padding-bottom:2px;display:inline-block">Credit · Statements · Compliance</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFICE / FACILITY -->
+  <section class="block layout-columns-reverse">
+    <div class="block-media">
+      <img src="assets/brand/hero-aerial-tanks.jpg" alt="Boksburg facility">
+    </div>
+    <div class="block-side-text">
+      <div class="inner">
+        <div class="suphead">Head Office &amp; Warehouse</div>
+        <h2 class="block-title">Boksburg, Gauteng.</h2>
+        <p class="block-copy">
+          12 Industria Crescent<br>
+          Boksburg North · 1459<br>
+          Gauteng · South Africa<br><br>
+          <strong style="color:var(--c-secondary);font-weight:700">Mon – Fri:</strong> 07h00 – 17h00<br>
+          <strong style="color:var(--c-secondary);font-weight:700">Saturday:</strong> 07h00 – 12h00<br>
+          <strong style="color:var(--c-secondary);font-weight:700">After Hours:</strong> Critical-line on call
+        </p>
+        <a href="https://maps.google.com" class="btn btn-underline">Open in Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP-STYLED CALLOUT -->
+  <section class="section is-dark" style="padding:0">
+    <div style="position:relative;width:100%;min-height:48vh;background:#0F1B36 url('assets/brand/hero-aerial-tanks.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,43,51,0.65),rgba(31,43,51,0.85))"></div>
+      <div style="position:relative;text-align:center;padding:80px 32px;max-width:720px;color:var(--c-bg)">
+        <div class="suphead" style="color:var(--c-accent)">Find Us</div>
+        <h2 style="font-family:var(--ff-heading);font-size:clamp(28px,3vw,42px);color:var(--c-bg);margin:8px 0 16px">26°12'S · 28°15'E</h2>
+        <p style="color:rgba(227,227,225,0.85);font-size:15px;line-height:1.7;max-width:520px;margin:0 auto">Boksburg lies on the East Rand industrial belt — twenty minutes from OR Tambo, on the haulage routes serving Witbank, Rustenburg and Limpopo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFTER HOURS -->
+  <section class="block layout-default is-shorter">
+    <div class="block-bg has-overlay-strong">
+      <img src="assets/brand/welding-blue.jpg" alt="Mining at night">
+    </div>
+    <div class="block-text">
+      <div class="suphead">After Hours · Critical Line</div>
+      <h1 class="block-title">Down Plant?<br><em>Call us.</em></h1>
+      <p class="block-copy">For Tier-1 trade accounts, the Pegasus critical-line is staffed 24/7. We mobilise stock, fabrication or technical support against an open PO.</p>
+      <a href="tel:+27820000000" class="btn btn-default">+27 82 000 0000</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="wordmark">Pegasus</div>
+        <div class="mark">Engineering &amp; Mining Supplies</div>
+        <p>Trade supplier of engineered components, consumables and bespoke fabrication to the South African mining, industrial and infrastructure sectors.</p>
+      </div>
+      <div>
+        <h5>Browse</h5>
+        <ul>
+          <li><a href="marketplace.html">Marketplace</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="network.html">Network</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Divisions</h5>
+        <ul>
+          <li><a href="products.html#welding">Welding &amp; Cutting</a></li>
+          <li><a href="products.html#abrasive">Abrasive</a></li>
+          <li><a href="products.html#power-tools">Power Tools</a></li>
+          <li><a href="products.html#safety">Safety &amp; PPE</a></li>
+          <li><a href="products.html#hand-tools">Hand Tools</a></li>
+          <li><a href="products.html#electrical">Electrical</a></li>
+          <li><a href="products.html#paint">Paint Products</a></li>
+          <li><a href="products.html#lubricants">Lubricants &amp; Fuel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Pegasus</a></li>
+          <li><a href="contact.html">Trade Accounts</a></li>
+          <li><a href="about.html#quality">Quality &amp; SHEQ</a></li>
+          <li><a href="about.html#bbbee">BBBEE Status</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:accounts@pegasuseng.co.za">accounts@pegasuseng.co.za</a></li>
+          <li><a href="tel:+27132431390">013 243 1390</a></li>
+          <li><a href="contact.html">Boksburg, Gauteng</a></li>
+          <li><a href="contact.html">Mon – Fri · 07h00 – 17h00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Pegasus Engineering &amp; Mining Supplies (Pty) Ltd</span>
+      <span>Reg. 2013/XXXXXX/07 · VAT 4XXXXXXXXX</span>
+      <span>Privacy · Terms · Cookies</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie" id="cookie">
+  <h6>Our website uses cookies</h6>
+  <p>We use cookies to remember your preferences, measure site traffic and personalise content. You can change or withdraw consent at any time.</p>
+  <div class="cookie-actions">
+    <button class="cookie-btn" onclick="document.getElementById('cookie').classList.add('is-hidden')">Reject all</button>
+    <button class="cookie-btn primary" onclick="document.getElementById('cookie').classList.add('is-hidden')">Accept all</button>
+  </div>
+</div>
+
+<script src="assets/nav.js"></script>
+<script src="assets/cart.js"></script>
+</body>
+</html>
