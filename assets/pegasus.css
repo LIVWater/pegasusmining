@@ -807,7 +807,11 @@ h2, h3, h4, h5, h6 { margin: 0; font-family: var(--ff-heading); font-weight: 700
   animation: divcarousel-scroll 50s linear infinite;
   will-change: transform;
 }
-.divcarousel:hover .divcarousel-track { animation-play-state: paused; }
+/* Pause on hover only for devices with real hover (desktop) — touch devices
+   shouldn't stick the carousel into a paused state after a tap. */
+@media (hover: hover) {
+  .divcarousel:hover .divcarousel-track { animation-play-state: paused; }
+}
 @media (prefers-reduced-motion: reduce) {
   .divcarousel-track { animation: none; }
 }
@@ -3314,8 +3318,8 @@ body.cart-locked { overflow: hidden; }
   animation: logocarousel-scroll 80s linear infinite;
   will-change: transform;
 }
-.logocarousel:hover .logocarousel-track {
-  animation-play-state: paused;
+@media (hover: hover) {
+  .logocarousel:hover .logocarousel-track { animation-play-state: paused; }
 }
 @media (prefers-reduced-motion: reduce) {
   .logocarousel-track { animation: none; }
@@ -3781,15 +3785,11 @@ body.cart-locked { overflow: hidden; }
 .brand { min-width: 0; }
 .brand .logo-emblem { flex-shrink: 0; }
 
-/* Prevent horizontal scroll caused by anything overshooting.
-   Use `clip` (not `hidden`) so it doesn't create a scroll container
-   that would break `position: sticky` on the header. */
-html, body { overflow-x: clip; }
-@supports not (overflow: clip) {
-  /* Older Safari/iOS fallback — guard sticky with -webkit-sticky */
-  html, body { overflow-x: hidden; }
-  .header { position: -webkit-sticky; position: sticky; top: 0; }
-}
+/* No global overflow-x. Components handle their own overflow.
+   Setting overflow-x on html/body creates a scroll container that
+   breaks `position: sticky` on the header (Safari especially) and
+   was confusing some carousel layouts on mobile. */
+.header { position: -webkit-sticky; position: sticky; top: 0; } /* iOS Safari */
 
 /* ============================================================
    HERO VIDEO — autoplays on all devices (mobile, tablet, desktop).
